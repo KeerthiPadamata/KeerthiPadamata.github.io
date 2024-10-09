@@ -1,0 +1,183 @@
+/* General Styling */
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes up at least full viewport height */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: 50px; /* Ensure height matches width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+#sidemenu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#sidemenu li {
+    display: inline;
+}
+
+#sidemenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+#sidemenu li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Content Section */
+.content {
+    padding: 40px;
+    text-align: center; /* Center text in the content area */
+    flex: 1; /* This allows the content to expand and push the footer down */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+}
+.content-about{
+ padding:40px;
+ text-align:center;
+ flex:1; 
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+h5{
+    display:flex;
+    justify-content: left;
+    font-size: 16px;
+    color: #666;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+blockquote {
+    margin: 10px 0;
+    font-style: italic;
+    color: white; /* Light color for the quotation */
+}
+
+/* Social Icons Styling */
+/* Social Icons Styling */
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    margin-top: 40px; /* Space from the top */
+}
+
+.social-icons a {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Default text color */
+    margin: 10px 0; /* Space between icons */
+    font-size: 18px; /* Font size for text */
+}
+
+.social-icons i {
+    font-size: 24px; /* Size of the icons */
+    margin-right: 30px; /* Space between the icon and text */
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #575757;
+}
+/* Hover and Active Effect for Navigation Links */
+#sidemenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    position: relative; /* To position the underline */
+    transition: color 0.3s ease; /* Smooth color change transition */
+}
+
+#sidemenu li a:hover,
+#sidemenu li a.active {
+    color: #ffcc00; /* Color change on hover and active */
+}
+
+/* Underline effect */
+#sidemenu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00; /* Color of underline */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+#sidemenu li a:hover::after,
+#sidemenu li a.active::after {
+    width: 100%; /* Full width underline on hover or active */
+}
